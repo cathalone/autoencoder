@@ -17,8 +17,9 @@ anomalous_train_data = train_data[~train_labels]
 anomalous_test_data = test_data[~test_labels]
 
 
-n = nn.NeuralNetwork([140, 32, 16, 8, 16, 32, 140], ['identity', 'identity', 'identity',
-                                                        'identity', 'identity', 'identity', 'sigmoid'], 0, 0.001, 1)
+# n = nn.NeuralNetwork([140, 100, 70, 50, 70, 100, 140], ['identity', 'identity', 'identity','identity', 'identity', 'identity', 'sigmoid'], 0, 0.001, 1)
+
+n = nn.NeuralNetwork([140, 70,30,70, 140], ['identity', 'identity','identity', 'identity', 'sigmoid'], 0, 0.001, 1)
 
 nn.load_weights(n)
 
